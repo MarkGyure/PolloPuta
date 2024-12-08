@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ObjectBreak : MonoBehaviour
+public class EnemyHandler : MonoBehaviour
 {
     // The velocity threshold at which the object will be destroyed
     public float destructionVelocityThreshold = 3f;
@@ -9,7 +9,7 @@ public class ObjectBreak : MonoBehaviour
     private Rigidbody2D rb2d;
 
     // Reference to the particle system prefab to be instantiated upon destruction
-    public ParticleSystem destructionParticles;
+    public GameObject explosionFX;
 
     // Reference to the position where the particle effect should be played (optional)
     private Vector3 destructionEffectPosition;
@@ -41,9 +41,12 @@ public class ObjectBreak : MonoBehaviour
         destructionEffectPosition = transform.position;
 
         // Play the particle effect if it is assigned
-        if (destructionParticles != null)
+        if (explosionFX != null)
         {
-            Instantiate(destructionParticles, destructionEffectPosition, Quaternion.identity);
+            GameObject effect = Instantiate(explosionFX, destructionEffectPosition, Quaternion.identity);
+
+            // Destroy the particle effect after 0.75 seconds
+            Destroy(effect.gameObject, 0.5f);
         }
         else
         {
