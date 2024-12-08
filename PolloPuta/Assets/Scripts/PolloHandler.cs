@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.UIElements.Experimental;
 
@@ -36,9 +37,11 @@ public class PolloHandler : MonoBehaviour
         circleCollider.enabled = true;
     }
 
-    public void Launch(Vector2 direction, float force)
+    public void Launch(Vector2 dir, float force)
     {
-        rb.AddForce(direction * force, ForceMode2D.Impulse);
+        rb.AddForce(dir * force, ForceMode2D.Impulse);
+
+        //Debug.Log(dir * force);
     }
 
     public Transform transformPollo(Vector2 transform, Transform centerPosition)

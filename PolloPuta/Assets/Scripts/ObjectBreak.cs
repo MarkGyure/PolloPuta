@@ -26,7 +26,7 @@ public class ObjectBreak : MonoBehaviour
         float collisionVelocity = rb2d.velocity.magnitude;
 
         // Debug log for velocity
-        Debug.Log($"Collision velocity: {collisionVelocity}");
+        //Debug.Log($"Collision velocity: {collisionVelocity}");
 
         // If the collision velocity is higher than the threshold, destroy the object
         if (collisionVelocity > destructionVelocityThreshold)

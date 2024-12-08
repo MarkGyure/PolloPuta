@@ -55,7 +55,7 @@ public class LaunchHandler : MonoBehaviour
             mousePos.z = Camera.main.nearClipPlane;
             worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
 
-            chargePosition = polloHandler.transformPollo(Vector2.ClampMagnitude(heading, maxMagnitude), centerPosition);
+            chargePosition = polloHandler.transformPollo(Vector2.ClampMagnitude(heading, maxMagnitude), polloStartPosition);
 
             SetLines(chargePosition.position);
 
