@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4410510314250803221}
   - component: {fileID: 5583934735148374650}
   - component: {fileID: 1614433578452082976}
+  - component: {fileID: 6017474496177111337}
   m_Layer: 0
   m_Name: HayBale
   m_TagString: Untagged
@@ -95,7 +96,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1332952178713231970}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f0b9c961b9f6a054c84b26905fa10225, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -147,7 +148,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f0b9c961b9f6a054c84b26905fa10225, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -158,3 +159,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6017474496177111337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332952178713231970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79267551a04a8d843a5b211445271fe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destructionVelocityThreshold: 3
+  destructionParticles: {fileID: 1226824797420698726, guid: c24bd59a049a96c4d81a609adbda68a5, type: 3}
