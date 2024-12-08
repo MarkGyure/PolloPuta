@@ -8,6 +8,8 @@ public class PolloHandler : MonoBehaviour
 
     Vector2 heading;
     Vector2 originalPosition;
+    Vector2 direction;
+    Vector2 directionNormalized;
 
     public void Awake()
     {
@@ -39,12 +41,17 @@ public class PolloHandler : MonoBehaviour
         rb.AddForce(direction * force, ForceMode2D.Impulse);
     }
 
-    public Transform transformPollo(Vector2 transform)
+    public Transform transformPollo(Vector2 transform, Transform centerPosition)
     {
         transform.x /= 2;
         transform.y /= 2;
 
         gameObject.transform.position = new Vector2(originalPosition.x - transform.x, originalPosition.y - transform.y);
+
+        direction = centerPosition.position - gameObject.transform.position;
+        directionNormalized = direction.normalized;
+
+        gameObject.transform.right = directionNormalized;
 
         return gameObject.transform;
     }

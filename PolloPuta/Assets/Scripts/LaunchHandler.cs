@@ -13,8 +13,15 @@ public class LaunchHandler : MonoBehaviour
     [SerializeField] private float maxMagnitude;
 
     [Header("Transform references")]
-    [SerializeField] private Transform startPosition;
+    [SerializeField] private Transform polloStartPosition;
     [SerializeField] public Transform chargePosition;
+    [SerializeField] private Transform leftLineStartPosition;
+    [SerializeField] private Transform rightLineStartPosition;
+    [SerializeField] private Transform centerPosition;
+
+    [Header("Line Renderers")]
+    [SerializeField] private LineRenderer rightLineRenderer;
+    [SerializeField] private LineRenderer leftLineRenderer;
 
     [Header("Scripts")]
     [SerializeField] private LaunchArea launchArea;
@@ -27,8 +34,8 @@ public class LaunchHandler : MonoBehaviour
 
     private GameObject spawnedPollo;
 
-    Vector3 worldPosition;
-    Vector2 heading;
+    private Vector3 worldPosition;
+    private Vector2 heading;
 
     public void Awake()
     {
@@ -48,7 +55,9 @@ public class LaunchHandler : MonoBehaviour
             mousePos.z = Camera.main.nearClipPlane;
             worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
 
-            chargePosition = polloHandler.transformPollo(Vector2.ClampMagnitude(heading, maxMagnitude));
+            chargePosition = polloHandler.transformPollo(Vector2.ClampMagnitude(heading, maxMagnitude), centerPosition);
+
+            SetLines(chargePosition.position);
 
             heading = polloHandler.updatePosition(worldPosition);
 
@@ -69,9 +78,23 @@ public class LaunchHandler : MonoBehaviour
 
     private void SpawnPollo()
     {
-        spawnedPollo = Instantiate(putaPollo, startPosition.position, Quaternion.identity);
+        spawnedPollo = Instantiate(putaPollo, polloStartPosition.position, Quaternion.identity);
+
+        SetLines(polloStartPosition.position);
 
         polloHandler = spawnedPollo.GetComponent<PolloHandler>();
     }
 
+    #region Slingshot Methods
+
+    private void SetLines(Vector2 position)
+    {
+        leftLineRenderer.SetPosition(0, position);
+        leftLineRenderer.SetPosition(1, leftLineStartPosition.position);
+
+        rightLineRenderer.SetPosition(0, position);
+        rightLineRenderer.SetPosition(1, rightLineStartPosition.position);
+    }
+
+    #endregion
 }
