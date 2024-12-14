@@ -47,11 +47,11 @@ public class ObjectBreak : MonoBehaviour
         }
         else
         {
-            Debug.Log("No particle effect set for this object.");
+            //Debug.Log("No particle effect set for this object.");
         }
 
         // Optionally: You can also add sound effects, camera shake, etc.
-        Debug.Log($"{gameObject.name} destroyed due to high velocity impact!");
+        //Debug.Log($"{gameObject.name} destroyed due to high velocity impact!");
 
         // Destroy the object after particles are instantiated (optional delay)
         Destroy(gameObject);

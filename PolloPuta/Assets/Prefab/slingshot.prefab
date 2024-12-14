@@ -594,8 +594,10 @@ MonoBehaviour:
   centerPosition: {fileID: 1699522420548928949}
   rightLineRenderer: {fileID: 8607162434369563325}
   leftLineRenderer: {fileID: 5051355604141486137}
-  launchArea: {fileID: 619972878322016264}
   putaPollo: {fileID: 2421584455250748339, guid: 717426a27abe77b42b572749b02c357d, type: 3}
+  launchArea: {fileID: 619972878322016264}
+  cameraManager: {fileID: 1642544552300098643, guid: ac4b31b8fe7f9be42a31b5c92292fda7, type: 3}
+  levelController: {fileID: 8803666607846127559, guid: 6b52e132cef082b4d8783511cf26e437, type: 3}
 --- !u!1 &6246366816959142536
 GameObject:
   m_ObjectHideFlags: 0

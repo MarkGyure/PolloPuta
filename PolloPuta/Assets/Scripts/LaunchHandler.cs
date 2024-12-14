@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using JetBrains.Annotations;
@@ -9,8 +10,9 @@ using UnityEngine.InputSystem;
 public class LaunchHandler : MonoBehaviour
 {
     [Header("Launch settings")]
-    [SerializeField] private float launchForce;
-    [SerializeField] private float maxMagnitude;
+    [SerializeField] private float launchForce = 250f;
+    [SerializeField] private float maxMagnitude = 2f;
+    [SerializeField] private float respawnCooldown = 2f;
 
     [Header("Transform references")]
     [SerializeField] private Transform polloStartPosition;
@@ -23,14 +25,17 @@ public class LaunchHandler : MonoBehaviour
     [SerializeField] private LineRenderer rightLineRenderer;
     [SerializeField] private LineRenderer leftLineRenderer;
 
-    [Header("Scripts")]
-    [SerializeField] private LaunchArea launchArea;
-    private PolloHandler polloHandler;
-
     [Header("Puta")]
     [SerializeField] private GameObject putaPollo;
 
+    [Header("Scripts")]
+    [SerializeField] private LaunchArea launchArea;
+    [SerializeField] private CameraManager cameraManager;
+    [SerializeField] private LevelController levelController;
+    private PolloHandler polloHandler;
+
     private bool clickedInArea = false;
+    private bool birdOnSlingshot = false;
 
     private GameObject spawnedPollo;
 
@@ -44,12 +49,12 @@ public class LaunchHandler : MonoBehaviour
 
     private void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame && launchArea.IsWithinArea())
+        if (Mouse.current.leftButton.wasPressedThisFrame && launchArea.IsWithinArea() && birdOnSlingshot)
         {
             clickedInArea = true;
         }
 
-        if (Mouse.current.leftButton.isPressed && clickedInArea)
+        if (Mouse.current.leftButton.isPressed && clickedInArea && birdOnSlingshot)
         {
             Vector3 mousePos = Input.mousePosition;
             mousePos.z = Camera.main.nearClipPlane;
@@ -64,13 +69,18 @@ public class LaunchHandler : MonoBehaviour
             //Debug.Log(heading);
         }
 
-        if (Mouse.current.leftButton.wasReleasedThisFrame && clickedInArea)
+        if (Mouse.current.leftButton.wasReleasedThisFrame && clickedInArea && birdOnSlingshot)
         {
             polloHandler.polloReleased();
-
             polloHandler.Launch(Vector2.ClampMagnitude(heading, maxMagnitude), launchForce);
+            levelController.OnBirdUsed();
+
+            cameraManager.SwitchToFollowCamera(spawnedPollo.transform);
 
             clickedInArea = false;
+            birdOnSlingshot = false;
+
+            StartCoroutine(SpawnPolloAfterCooldown());
 
             //Debug.Log(Vector2.ClampMagnitude(heading, maxMagnitude).magnitude);
         }
@@ -83,6 +93,16 @@ public class LaunchHandler : MonoBehaviour
         SetLines(polloStartPosition.position);
 
         polloHandler = spawnedPollo.GetComponent<PolloHandler>();
+
+        birdOnSlingshot = true;
+    }
+
+    private IEnumerator SpawnPolloAfterCooldown()
+    {
+        yield return new WaitForSeconds(respawnCooldown);
+
+        SpawnPollo();
+        cameraManager.SwitchToIdleCamera();
     }
 
     #region Slingshot Methods

@@ -7,6 +7,9 @@ public class PolloHandler : MonoBehaviour
     private Rigidbody2D rb;
     private CircleCollider2D circleCollider;
 
+    private bool launched;
+    private bool shouldFaceVelocityDirection;
+
     Vector2 heading;
     Vector2 originalPosition;
     Vector2 direction;
@@ -21,6 +24,15 @@ public class PolloHandler : MonoBehaviour
         circleCollider.enabled = false;
 
         originalPosition = rb.position;
+    }
+
+    private void FixedUpdate()
+    {
+
+        if(launched && shouldFaceVelocityDirection)
+        {
+            transform.right = rb.velocity;
+        }
     }
 
     public Vector2 updatePosition(Vector3 worldPosition)
@@ -41,6 +53,9 @@ public class PolloHandler : MonoBehaviour
     {
         rb.AddForce(dir * force, ForceMode2D.Impulse);
 
+        launched = true;
+        shouldFaceVelocityDirection = true;
+
         //Debug.Log(dir * force);
     }
 
@@ -57,5 +72,10 @@ public class PolloHandler : MonoBehaviour
         gameObject.transform.right = directionNormalized;
 
         return gameObject.transform;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        shouldFaceVelocityDirection = false;
     }
 }

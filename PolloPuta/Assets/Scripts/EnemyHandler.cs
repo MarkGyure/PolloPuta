@@ -14,6 +14,8 @@ public class EnemyHandler : MonoBehaviour
     // Reference to the position where the particle effect should be played (optional)
     private Vector3 destructionEffectPosition;
 
+    [SerializeField] private LevelController levelController;
+
     void Start()
     {
         // Get the Rigidbody2D component if it's not already assigned
@@ -26,7 +28,7 @@ public class EnemyHandler : MonoBehaviour
         float collisionVelocity = rb2d.velocity.magnitude;
 
         // Debug log for velocity
-        Debug.Log($"Collision velocity: {collisionVelocity}");
+        //Debug.Log($"Collision velocity: {collisionVelocity}");
 
         // If the collision velocity is higher than the threshold, destroy the object
         if (collisionVelocity > destructionVelocityThreshold)
@@ -50,13 +52,15 @@ public class EnemyHandler : MonoBehaviour
         }
         else
         {
-            Debug.Log("No particle effect set for this object.");
+            //Debug.Log("No particle effect set for this object.");
         }
 
         // Optionally: You can also add sound effects, camera shake, etc.
-        Debug.Log($"{gameObject.name} destroyed due to high velocity impact!");
+        //Debug.Log($"{gameObject.name} destroyed due to high velocity impact!");
 
         // Destroy the object after particles are instantiated (optional delay)
         Destroy(gameObject);
+
+        levelController.OnEnemyKilled();
     }
 }
