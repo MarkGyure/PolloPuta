@@ -7,7 +7,6 @@ public class CameraManager : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera idleCamera;
     [SerializeField] private CinemachineVirtualCamera followCamera;
-    [SerializeField] private float yLevel;
 
     private void Awake()
     {

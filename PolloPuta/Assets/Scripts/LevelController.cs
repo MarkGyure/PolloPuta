@@ -75,7 +75,7 @@ public class LevelController : MonoBehaviour
 
     private void checkIfAllEnemiesDead()
     {
-        if (remainingEnemies > 0)
+        if (remainingEnemies == 0)
         {
             WinGame();
         }
