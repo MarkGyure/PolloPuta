@@ -99,8 +99,9 @@ public class LaunchHandler : MonoBehaviour
 
     private IEnumerator SpawnPolloAfterCooldown()
     {
-        yield return new WaitForSeconds(respawnCooldown);
+        //Debug.Log("received");
 
+        yield return new WaitForSeconds(respawnCooldown);
         SpawnPollo();
         cameraManager.SwitchToIdleCamera();
     }

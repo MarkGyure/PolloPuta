@@ -50,7 +50,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idleCamera: {fileID: 6357685488858999384}
   followCamera: {fileID: 284620349130539958}
-  yLevel: 0
 --- !u!1 &1791777226547477758
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +179,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852917309040272615}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 

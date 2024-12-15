@@ -161,3 +161,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0287c9bab32584d96c7b2a1fd8c7c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slingShot: {fileID: 3544146364362378914, guid: 635f7eab4e0fa314ead331d923e3d4bc, type: 3}

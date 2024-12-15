@@ -163,3 +163,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destructionVelocityThreshold: 3
   explosionFX: {fileID: 2936165492097615221, guid: d20fca295b3d2914cbc12b890613622c, type: 3}
+  levelController: {fileID: 8803666607846127559, guid: 6b52e132cef082b4d8783511cf26e437, type: 3}

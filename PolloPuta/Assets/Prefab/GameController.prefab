@@ -47,3 +47,5 @@ MonoBehaviour:
   totalEnemies: 2
   totalBirds: 3
   secondsToWaitBeforeDeathCheck: 3
+  winCanvas: {fileID: 8849770132803461610, guid: 6fb15504d5605c74293c0ef50e6eb3a1, type: 3}
+  loseCanvas: {fileID: 5152050108948619115, guid: 2fc08dfe0d3050a44940bc9c3144c113, type: 3}

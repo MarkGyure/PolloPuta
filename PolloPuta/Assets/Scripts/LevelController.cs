@@ -14,6 +14,13 @@ public class LevelController : MonoBehaviour
 
     public Canvas winCanvas;
     public Canvas loseCanvas;
+
+    private void Awake()
+    {
+        winCanvas.gameObject.SetActive(false);
+        loseCanvas.gameObject.SetActive(false);
+    }
+
     void Start()
     {
         remainingEnemies = totalEnemies;
@@ -66,14 +73,15 @@ public class LevelController : MonoBehaviour
     {
         yield return new WaitForSeconds(secondsToWaitBeforeDeathCheck);
 
-        if(remainingEnemies == 0)
-        {
-            WinGame();
-        }
+        Debug.Log(remainingEnemies);
 
-        else
+        if (remainingEnemies > 0)
         {
             LoseGame();
+        }
+        else
+        {
+            WinGame();
         }
     }
 
@@ -88,12 +96,12 @@ public class LevelController : MonoBehaviour
     private void WinGame()
     {
         winCanvas.gameObject.SetActive(true);
-        Debug.Log("You won!");
+        //Debug.Log("You won!");
     }
 
     private void LoseGame()
     {
         loseCanvas.gameObject.SetActive(true);
-        Debug.Log("You lost...");
+        //Debug.Log("You lost...");
     }
 }
