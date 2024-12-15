@@ -1462,9 +1462,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: slingshot
       objectReference: {fileID: 0}
+    - target: {fileID: 3682594631283921900, guid: 635f7eab4e0fa314ead331d923e3d4bc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.066
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682594631283921900, guid: 635f7eab4e0fa314ead331d923e3d4bc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.099
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534526391397119105, guid: 635f7eab4e0fa314ead331d923e3d4bc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.031
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534526391397119105, guid: 635f7eab4e0fa314ead331d923e3d4bc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.414
+      objectReference: {fileID: 0}
     - target: {fileID: 9189069950257241579, guid: 635f7eab4e0fa314ead331d923e3d4bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.01
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: 9189069950257241579, guid: 635f7eab4e0fa314ead331d923e3d4bc, type: 3}
       propertyPath: m_LocalPosition.y
