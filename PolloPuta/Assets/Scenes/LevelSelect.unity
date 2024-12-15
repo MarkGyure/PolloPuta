@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1663220cae7692745a53563dea211761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SceneName
+  sceneToLoad: Level17
 --- !u!114 &114351198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,7 +541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1663220cae7692745a53563dea211761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SceneName
+  sceneToLoad: Level6
 --- !u!114 &317673894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,7 +722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1663220cae7692745a53563dea211761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SceneName
+  sceneToLoad: Level3
 --- !u!114 &679658111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -811,7 +811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1663220cae7692745a53563dea211761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SceneName
+  sceneToLoad: Level12
 --- !u!114 &716340798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -900,7 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1663220cae7692745a53563dea211761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SceneName
+  sceneToLoad: Level15
 --- !u!114 &892134935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1198,7 +1198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1663220cae7692745a53563dea211761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SceneName
+  sceneToLoad: Level2
 --- !u!114 &1082719369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1287,7 +1287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1663220cae7692745a53563dea211761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SceneName
+  sceneToLoad: Level13
 --- !u!114 &1214807080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1376,7 +1376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1663220cae7692745a53563dea211761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SceneName
+  sceneToLoad: Level14
 --- !u!114 &1222267748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1465,7 +1465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1663220cae7692745a53563dea211761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SceneName
+  sceneToLoad: Level7
 --- !u!114 &1228123006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1629,7 +1629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1663220cae7692745a53563dea211761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SceneName
+  sceneToLoad: Level8
 --- !u!114 &1348406665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1718,7 +1718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1663220cae7692745a53563dea211761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SceneName
+  sceneToLoad: Level5
 --- !u!114 &1420153551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1885,7 +1885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1663220cae7692745a53563dea211761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SceneName
+  sceneToLoad: Level10
 --- !u!114 &1655125021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1974,7 +1974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1663220cae7692745a53563dea211761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SceneName
+  sceneToLoad: Level9
 --- !u!114 &1764095298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2063,7 +2063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1663220cae7692745a53563dea211761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SceneName
+  sceneToLoad: Level16
 --- !u!114 &1805726499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2152,7 +2152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1663220cae7692745a53563dea211761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SceneName
+  sceneToLoad: Level11
 --- !u!114 &2029793602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2241,7 +2241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1663220cae7692745a53563dea211761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SceneName
+  sceneToLoad: Level4
 --- !u!114 &2092877542
 MonoBehaviour:
   m_ObjectHideFlags: 0

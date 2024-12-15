@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LevelController : MonoBehaviour
@@ -10,6 +11,9 @@ public class LevelController : MonoBehaviour
     private int remainingBirds;
 
     [SerializeField] private float secondsToWaitBeforeDeathCheck = 5f;
+
+    public Canvas winCanvas;
+    public Canvas loseCanvas;
     void Start()
     {
         remainingEnemies = totalEnemies;
@@ -83,11 +87,13 @@ public class LevelController : MonoBehaviour
     
     private void WinGame()
     {
+        winCanvas.gameObject.SetActive(true);
         Debug.Log("You won!");
     }
 
     private void LoseGame()
     {
+        loseCanvas.gameObject.SetActive(true);
         Debug.Log("You lost...");
     }
 }

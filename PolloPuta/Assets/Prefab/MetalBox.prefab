@@ -171,5 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79267551a04a8d843a5b211445271fe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructionVelocityThreshold: 6.5
+  destructionVelocityThreshold: 7
   destructionParticles: {fileID: 1226824797420698726, guid: 8e8644448ea899d47ba3732a28dd3c0b, type: 3}

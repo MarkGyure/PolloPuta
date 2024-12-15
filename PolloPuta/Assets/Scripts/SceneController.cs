@@ -9,6 +9,7 @@ public class SceneController : MonoBehaviour
         // Get the current scene's index
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
+
         // Calculate the next scene's index
         int nextSceneIndex = currentSceneIndex + 1;
 
@@ -22,6 +23,16 @@ public class SceneController : MonoBehaviour
         {
             // If there is no next scene, print a message
             Debug.Log("No next scene available.");
+        }
+        
+    }
+    public void LoadMainScreen(int sceneIndex)
+    {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+
+        if (currentSceneName == "Level17")
+        {
+            SceneManager.LoadScene(0);
         }
     }
 }
