@@ -30,9 +30,7 @@ public class SceneController : MonoBehaviour
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
 
-        if (currentSceneName == "Level17")
-        {
             SceneManager.LoadScene(0);
-        }
+        
     }
 }
